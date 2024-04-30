@@ -1,0 +1,113 @@
+Question 7-(range based prime number)
+
+#include <iostream>
+using namespace std;
+int main()
+{
+     int num,range;
+    cout<<"enter the to number to start a number";
+    cin >> num;
+    
+    cout<<"range of prime number";
+    
+    cin >> range;
+    
+     for(int i=1;i<=2*range;i++)
+     {
+         if((num+i)%2!=0)
+         {
+             cout<<"number is prime ="<<(num+i)<<endl;
+         }
+     }   
+} 
+
+Question 5-->(even odd range)
+
+#include <iostream>
+using namespace std;
+int main()
+{
+     int num ,second;
+     cout<<"enter the number to start "<<endl;
+     cin>> num;
+     
+     cout<<"enter the nuumber how many even or odd you want";
+     cin>>second;
+     
+     for(int i=1;i<=second;i++)
+     {
+         if((num+i)%2==0)
+         {
+             cout<<"number is even= "<<(num+i)<<endl;
+         }
+         else
+         {
+             cout<<"number is odd= "<<(num+i)<<endl;
+         }
+     }
+     
+    
+}
+
+Question 7---> (table print)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int first,last;
+    cout<<"enter the number to start a table"<<endl;
+    cin>>first;
+    cout<<"enter the number to end a table"<<endl;
+    cin>>last;
+    cout<<"  ";
+    
+      for(int i=first ;i<=last;i++)
+        {
+            cout<<"  "<<i;
+        }
+    
+    
+    for(int i=first ;i<=last;i++)
+    {
+        cout<<endl;
+        cout<<i<<" ";
+        for(int j=first ;j<=last;j++)
+        {
+            cout<<i*j<<" ";
+        }
+    }
+    
+    
+}
+
+
+Question 3--->
+
+#include<bits/stdc++.h>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int d,m,y;
+    cout<<"enter the day"<<endl;
+    cin>>d;
+    cout<<"enter the month"<<endl;
+    cin>>m;
+    cout<<"enter the year"<<endl;
+    cin>>y;
+    
+    int Y=y-1;
+    int c=Y/100;
+   int z=Y-100*c;
+    
+    int w=static_cast<int>((d+floor(2.6*(m-1))+z+floor(z/4)+floor(c/4)-2*c))%7;
+    const char* days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday","saturday"};
+    
+    cout << "The day of the week on " << d << "/" << m << "/" << y << " is: " << days[w] << endl;
+    cout<<w;
+    return 0;
+}
+
+
+  
